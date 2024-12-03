@@ -1,7 +1,7 @@
-# Pen Pulse AWS
+# PenPulse
 
 ## Overview
-Pen Pulse AWS is a React-based web application integrated with AWS Amplify for backend services. The project leverages modern JavaScript frameworks and tools, including Vite for build and development, and supports scalable infrastructure using Terraform.
+PenPulse is a React-based web application integrated with AWS Amplify for backend services. The project leverages modern JavaScript frameworks and tools, including Vite for build and development, and supports scalable infrastructure using Terraform.
 
 ## Features
 - **AWS Amplify Integration**: Authentication and backend services.
