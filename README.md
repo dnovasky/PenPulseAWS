@@ -1,90 +1,116 @@
-# PenPulse - AWS Cloud-Based Blogging Application
+# Pen Pulse AWS
 
-## Project Overview
+## Overview
+Pen Pulse AWS is a React-based web application integrated with AWS Amplify for backend services. The project leverages modern JavaScript frameworks and tools, including Vite for build and development, and supports scalable infrastructure using Terraform.
 
-PenPulse is a secure and scalable cloud-based blogging platform hosted on Amazon Web Services (AWS). The platform enables users to seamlessly create, manage, and share blog posts with high levels of security and reliability.
+## Features
+- **AWS Amplify Integration**: Authentication and backend services.
+- **Responsive UI**: Built with Bootstrap.
+- **Modern JavaScript Libraries**: Includes React, React DOM, and OIDC for identity management.
+- **Infrastructure as Code**: Managed using Terraform.
 
-## Project Team
+---
 
-- **Carolynn Madriaga**
-- **Donald Novasky**
-- **Sameer Nagar**
+## Prerequisites
+Ensure the following tools are installed on your system before setting up the project:
+- **Node.js**: (Recommended version: 18.x)
+- **npm**: (Comes with Node.js)
+- **AWS CLI**: Configured with appropriate credentials.
+- **Terraform**: Required for infrastructure setup.
 
-## Project Timeline
+---
 
-- **Start Date**: September 13, 2024
-- **Completion Date**: November 30, 2024
+## Installation
 
-## Objectives
+### Clone the Repository
+```bash
+git clone <repository-url>
+cd PenPulseAWS-main
+```
 
-- Develop a user-friendly blogging platform with features such as:
-  - Post creation, editing, and commenting
-  - User authentication and profile management
-- Ensure scalability and security using AWS services:
-  - Amazon EC2, DynamoDB, S3, Lambda, IAM
-- Implement DevOps principles for efficient development and deployment:
-  - Tools: Docker, Kubernetes, Jenkins, Terraform
+### Install Dependencies
+```bash
+npm install
+```
 
-## Key Features
+---
 
-- **Post Management**: Create, edit, and delete blog posts
-- **User Authentication**: Secure login and profile management
-- **Commenting System**: Users can comment on posts
-- **Scalability**: Leveraging AWS services for high availability and performance
-- **Security**: Encryption, IAM policies, and compliance with PCI-DSS standards
+## Scripts
+Manage the project using the following npm scripts:
 
-## AWS Services Used
+### Start the Development Server
+```bash
+npm run dev
+```
+This command starts a local server for development with hot reloading.
 
-- **Amazon EC2**: Hosting backend services
-- **DynamoDB**: Secure and scalable database management
-- **S3**: Object storage and data management
-- **Lambda**: Serverless computing for backend logic
-- **IAM**: Identity and access management
+### Build the Application for Production
+```bash
+npm run build
+```
 
-## DevOps Tools
+### Preview the Production Build
+```bash
+npm run preview
+```
 
-- **Docker**: Containerization
-- **Kubernetes**: Container orchestration
-- **Jenkins**: Continuous integration and deployment
-- **Terraform**: Infrastructure as Code (IaC)
+### Run the Linter
+```bash
+npm run lint
+```
 
-## Completed Milestones
+---
 
-- Finalized application requirements
-- Designed AWS architecture
-- Defined security requirements
-- Created system architecture diagrams
-- Conducted risk assessment and mitigation planning
-- Set up EC2 instances, configured DynamoDB, implemented S3 buckets, established CloudWatch
-- Deployed initial infrastructure using Terraform
-- Developed core backend services using Python Flask
-- Implemented user authentication and profile management
-- Integrated DynamoDB and set up RESTful APIs
-- Integration, load, stress, and security testing
-- Final deployment and launch
+## Usage
+1. Start the application using:
+   ```bash
+   npm run dev
+   ```
+2. Open your browser and navigate to:  
+   [http://localhost:3000](http://localhost:3000) (or as specified in the terminal).
 
-## Challenges and Mitigations
+---
 
-- **Integration Issues**: Resolved through thorough testing and AWS support
-- **Security Concerns**: Addressed with advanced encryption and regular audits
-- **Performance Bottlenecks**: Optimized API endpoints and database queries
-- **Resource Management**: Monitored using AWS cost management tools
-- **User Authentication**: Refined through continuous testing and feedback
+## Infrastructure Setup
+Terraform scripts for infrastructure setup are located in the `terraform/` directory.
 
-## Upcoming Work
+### Steps:
+1. Navigate to the Terraform directory:
+   ```bash
+   cd terraform
+   ```
+2. Initialize Terraform:
+   ```bash
+   terraform init
+   ```
+3. Apply the configuration:
+   ```bash
+   terraform apply
+   ```
+   > Review and confirm the changes before applying.
 
-- AI-powered content recommendations
-- Multi-language support
-- Social media integration
+---
 
-## Conclusion
+## Dependencies
 
-The PenPulse project is progressing well, with significant milestones achieved. The platform aims to provide a robust, user-friendly blogging experience leveraging AWS's capabilities.
+### Main Libraries:
+- **AWS Amplify**: Backend services and authentication.
+- **Bootstrap**: CSS framework for responsive design.
+- **React & React DOM**: Frontend library for building user interfaces.
+- **Sass**: Preprocessor for better CSS management.
 
-## Contact
+### Development Tools:
+- **Vite**: Build and development tool for optimized performance.
+- **ESLint**: Ensures code quality and linting.
 
-For more information, please contact the project team:
+---
 
-- **Carolynn Madriaga**
-- **Donald Novasky**
-- **Sameer Nagar**
+## Contributing
+Contributions are welcome! Feel free to open issues or submit pull requests for any improvements or bug fixes.
+
+---
+
+## License
+This project is licensed under the [MIT License](LICENSE).
+
+---
