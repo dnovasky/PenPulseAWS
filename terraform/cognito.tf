@@ -24,7 +24,7 @@ resource "aws_cognito_user_pool_client" "pen-pulse_client" {
   supported_identity_providers = ["COGNITO"]
 
   callback_urls = ["https://${aws_instance.pen_pulse.public_ip}"]
-  logout_urls   = ["https://${aws_instance.pen_pulse.public_dns}/logout"]
+  logout_urls   = ["https://${aws_instance.pen_pulse.public_ip}/logout"]
 
   allowed_oauth_flows_user_pool_client = true
 

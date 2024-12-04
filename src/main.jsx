@@ -4,10 +4,7 @@ import { AuthProvider } from 'react-oidc-context'
 
 import './style.scss'
 
-const redirectUri = import.meta.env.prod
-  ? `https://${import.meta.env.VITE_PENPULSE_URL}`
-  : 'http://localhost:5173/'
-console.log(redirectUri)
+const redirectUri = `https://${import.meta.env.VITE_PENPULSE_URL}`
 
 // Your Cognito User Pool information
 const cognitoAuthConfig = {
@@ -16,7 +13,7 @@ const cognitoAuthConfig = {
   }`,
   client_id: `${import.meta.env.VITE_CLIENT_ID}`,
   redirect_uri: redirectUri,
-  redirectMethod: 'replace',
+  redirectMethod: 'assign',
   response_type: 'code',
   scope: 'email openid profile',
 }
