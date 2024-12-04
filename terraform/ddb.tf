@@ -130,7 +130,7 @@ resource "aws_dynamodb_table" "blog_table" {
 # Trigger a local script (AWS CLI or Python) to insert data after table creation
 resource "null_resource" "load_data" {
   provisioner "local-exec" {
-    command = "aws dynamodb batch-write-item --request-items fileb://batch-write-blog.json"
+    command = "aws dynamodb batch-write-item --request-items file://batch-write-blog.json"
   }
 
   # Ensure it only runs after the DynamoDB table is created

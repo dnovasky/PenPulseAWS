@@ -6,10 +6,13 @@ import './style.scss'
 
 // Your Cognito User Pool information
 const cognitoAuthConfig = {
-  authority: 'https://cognito-idp.us-west-1.amazonaws.com/us-west-1_JX5gbuFXg',
-  client_id: '10irqk4ha30ljq58iv51kvvu55',
+  authority: 'https://cognito-idp.us-west-1.amazonaws.com/us-west-1_qVBDlplgo',
+  client_id: '7mo49khp7gvn82led1iremv4jj',
   redirect_uri: 'http://localhost:5173/',
+  redirectMethod: 'replace',
   response_type: 'code',
+  disablePKCE: true,
+  revokeTokensOnSigout: true,
   scope: 'email openid profile',
 }
 
