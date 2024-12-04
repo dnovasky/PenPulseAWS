@@ -13,3 +13,21 @@ resource "aws_lambda_function" "get_all_lambda_function" {
   handler          = "getAllPosts.lambda_handler"
   timeout          = 10
 }
+
+resource "aws_lambda_function_url" "getAllPosts" {
+  function_name      = aws_lambda_function.get_all_lambda_function.function_name
+  authorization_type = "NONE"
+
+  cors {
+    allow_credentials = true
+    allow_origins     = ["*"]
+    allow_methods     = ["*"]
+    allow_headers     = ["date", "keep-alive"]
+    expose_headers    = ["keep-alive", "date"]
+    max_age           = 86400
+  }
+}
+
+output "lamda_url" {
+  value = aws_lambda_function_url.getAllPosts.function_url
+}

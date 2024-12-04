@@ -30,7 +30,7 @@ resource "aws_iam_policy" "lambda_dynamodb_policy" {
           "dynamodb:Query",
           "dynamodb:Scan"
         ],
-        Resource = "arn:aws:dynamodb:us-west-2:816069160044:table/blog-table"
+        Resource = "arn:aws:dynamodb:us-west-1:816069160044:table/blog-table"
       }
     ]
   })

@@ -21,7 +21,7 @@ const Topbar = () => {
   }
 
   const signOutRedirect = () => {
-    const clientId = '7mo49khp7gvn82led1iremv4jj'
+    const clientId = import.meta.env.VITE_CLIENT_ID
     const logoutUri = 'http://localhost:5173/logout'
     const cognitoDomain =
       'https://pen-pulse-auth-domain.auth.us-west-1.amazoncognito.com'

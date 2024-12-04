@@ -10,5 +10,8 @@ resource "aws_instance" "pen_pulse" {
   }
 
   user_data = file("./penpulse.sh")
+}
 
+output "front_end_public_ip" {
+  value = aws_instance.pen_pulse.public_ip
 }

@@ -16,8 +16,7 @@ const options = {
 }
 
 async function getAllPosts() {
-  const url =
-    'https://xdrxcq4gme7datslqin36e7ywy0xedyb.lambda-url.us-west-1.on.aws/'
+  const url = import.meta.env.VITE_LAMDA_URL
   try {
     const response = await fetch(url)
     if (!response.ok) {

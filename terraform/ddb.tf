@@ -81,7 +81,7 @@ resource "aws_dynamodb_table" "blog_table" {
     read_capacity  = 5
   }
 
-    global_secondary_index {
+  global_secondary_index {
     name            = "BodyIndex"
     hash_key        = "body"
     projection_type = "ALL"
