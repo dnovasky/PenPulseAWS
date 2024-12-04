@@ -14,5 +14,3 @@ sudo systemctl start httpd.service
 sudo systemctl enable httpd.service
 
 sudo yum install git -y
-git clone https://github.com/dnovasky/PenPulseAWS.git
-sudo mv PenPulseAWS/dist/* /var/www/html/

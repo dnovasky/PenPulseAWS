@@ -5,7 +5,7 @@ import { AuthProvider } from 'react-oidc-context'
 import './style.scss'
 
 const redirectUri = import.meta.env.prod
-  ? `http://${import.meta.env.VITE_PENPULSE_URL}`
+  ? `https://${import.meta.env.VITE_PENPULSE_URL}`
   : 'http://localhost:5173/'
 console.log(redirectUri)
 

@@ -23,10 +23,12 @@ resource "aws_cognito_user_pool_client" "pen-pulse_client" {
   allowed_oauth_scopes         = ["email", "openid", "profile"]
   supported_identity_providers = ["COGNITO"]
 
-  callback_urls = ["http://localhost:5173/"]
-  logout_urls   = ["http://localhost:5173/logout"]
+  callback_urls = ["https://${aws_instance.pen_pulse.public_dns}"]
+  logout_urls   = ["https://${aws_instance.pen_pulse.public_dns}/logout"]
 
   allowed_oauth_flows_user_pool_client = true
+
+  depends_on = [ aws_instance.pen_pulse ]
 }
 
 # Hosted UI Domain
